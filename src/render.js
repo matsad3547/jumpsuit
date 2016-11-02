@@ -32,12 +32,9 @@ export default function (stores, baseComponent, options = {}) {
       console.warn('Jumpsuit doesn\'t support the Redux Dev Tools browser extension!')
     }
 
-    const Hsr = require('./hsr').default
-    const hsrComponent = process.env.HSR_WS ? <Hsr /> : <div />
-
     const DevTools = require('./devtools').default
 
-    child = <div>{base}<DevTools />{hsrComponent}</div>
+    child = <div>{base}<DevTools /></div>
   }
 
   const root = <Provider store={store}>{child}</Provider>
