@@ -1,13 +1,14 @@
-import Todos from 'state/todos'
-import Todo from 'components/todo'
+import React from 'react'
 
-export default ({ todos }) => (
+import Todo from './todo'
+
+export default ({ todos, toggleTodo }) => (
   <ul>
     {todos.map(todo =>
       <Todo
         key={todo.id}
         {...todo}
-        onClick={e => Todos.toggle(todo.id)}
+        onClick={e => toggleTodo(todo.id)}
       />
     )}
   </ul>

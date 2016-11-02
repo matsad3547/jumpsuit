@@ -20,7 +20,7 @@ export default State({
   toggle (state, id) {
     return {
       all: state.all.map(d => {
-        if(d.id == id){
+        if(d.id === id){
           d.completed = !d.completed
         }
         return d

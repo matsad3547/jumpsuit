@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default ({ completed, text, ...rest }) => (
   <li
     style={{

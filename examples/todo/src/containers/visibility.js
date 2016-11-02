@@ -1,4 +1,6 @@
-import FilterLink from 'containers/filterLink'
+import React from 'react'
+
+import FilterLink from '../containers/filterLink'
 
 export default () => (
   <div className="Visibility">

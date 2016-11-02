@@ -1,4 +1,6 @@
-import Todos from 'state/todos'
+import React from 'react'
+
+import Todos from '../state/todos'
 
 export default () => {
   let input

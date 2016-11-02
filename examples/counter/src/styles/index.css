@@ -1,0 +1,11 @@
+body {
+  background: #1a2b34;
+  color: #e45d35;
+  padding: 20px;
+}
+a {
+  color: #87ceeb;
+}
+#App {
+  font-size: 25px;
+}

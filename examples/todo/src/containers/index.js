@@ -1,9 +1,11 @@
-import Visibility from 'containers/visibility'
-import Todos from 'containers/todos'
-import AddTodo from 'containers/addTodo'
+import React from 'react'
+
+import Visibility from '../containers/visibility'
+import Todos from '../containers/todos'
+import AddTodo from '../containers/addTodo'
 
 export default () => (
-  <div class="App">
+  <div className="App">
     <Visibility />
     <br/>
     <Todos />

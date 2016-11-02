@@ -1,22 +1,24 @@
 {
-  "name": "jumpsuit-todo-example",
-  "version": "1.0.0",
-  "description": "Jumpsuit todo example",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jumpsuit/jumpsuit.git"
-  },
-  "scripts": {
-    "watch": "jumpsuit watch",
-    "build": "jumpsuit build"
-  },
+  "name": "new",
+  "version": "0.1.0",
+  "private": true,
   "devDependencies": {
-    "nib": "^1.1.0",
-    "standard": "^8.2.0",
+    "react-scripts": "0.7.0",
     "stylus": "^0.54.5"
   },
   "dependencies": {
-    "jumpsuit": "^0.8.0"
+    "axios": "^0.15.2",
+    "jumpsuit": "^1.0.0",
+    "lodash": "^4.16.6",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "scripts": {
+    "start": "npm run styles:watch & react-scripts start",
+    "build": "npm run styles:build && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "styles:watch": "stylus src/styles/index.styl",
+    "styles:build": "stylus src/styles/index.styl --compress"
   }
 }

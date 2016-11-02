@@ -1,7 +1,8 @@
+import React from 'react'
 import {Component} from 'jumpsuit'
 //
-import Todos from 'state/todos'
-import Link from 'components/link'
+import Todos from '../state/todos'
+import Link from '../components/link'
 
 export default Component({
   render(){
