@@ -36,6 +36,3 @@ export function combine (states, options = {}) {
 
   return store
 }
-
-export function getDevToolsState () {}
-export function setDevToolsState () {}

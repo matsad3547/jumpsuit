@@ -13,6 +13,12 @@ import State, { attachDispatcher, jumpstateDefaults } from 'jumpstate'
 import Goto from './routing'
 import { Middleware } from './reducer'
 
+let hsr
+
+if (process.env.NODE_ENV !== 'production') {
+  hsr = require('./hsr').default
+}
+
 module.exports = {
   /* Core */
   Component,
@@ -34,5 +40,6 @@ module.exports = {
 
   /* Other */
   attachDispatcher,
-  jumpstateDefaults
+  jumpstateDefaults,
+  hsr
 }

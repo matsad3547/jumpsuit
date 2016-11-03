@@ -13,7 +13,7 @@ export default Component({
           placeholder='Enter a GitHub username'
           value={this.props.search || ''}
           onChange={(e) => getUser(e.target.value)}
-          />
+        />
 
         <User
           user={this.props.user}

@@ -1,17 +1,7 @@
-import React from 'react'
-import { Render, Router, Route, IndexRoute } from 'jumpsuit'
-/* state */
-import state from './state/index'
-/* screens */
-import App from './screens/index'
-import Github from './screens/github'
-/* styles */
-import './styles/index.css'
+import './app'
 
-Render(state, (
-  <Router>
-    <Route path='/' component={App}>
-      <IndexRoute component={Github} />
-    </Route>
-  </Router>
-))
+if (module.hot) {
+  module.hot.accept('./app', () => {
+    require('jumpsuit').hsr()
+  })
+}
