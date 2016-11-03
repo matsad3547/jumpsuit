@@ -13,15 +13,21 @@ export function Middleware (...newMiddleware) {
 
 export let STORE
 
+const defaultOptions = {
+  devMaxHistory: 25,
+  devShouldCatchErrors: true
+}
+
 export function combine (states, options = {}) {
+  options = Object.assign({}, defaultOptions, options)
   const nativeMiddleware = applyMiddleware(thunk, routerMiddleware(options.useHash ? hashHistory : browserHistory), ...userMiddleware)
   const enhancers = [nativeMiddleware]
 
   if (process.env.NODE_ENV !== 'production') {
     const devTools = require('./devtools')
     const devToolsExtension = devTools.default.instrument({
-      maxAge: Number(process.env.REDUX_MAX_AGE),
-      shouldCatchErrors: Boolean(process.env.REDUX_SHOULD_CATCH_ERRORS)
+      maxAge: options.devMaxHistory,
+      shouldCatchErrors: options.devShouldCatchErrors
     })
     enhancers.push(devToolsExtension)
   }
