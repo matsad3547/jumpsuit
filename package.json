@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/jumpsuit/jumpsuit.git"
   },
+  "main": "lib/index.js",
   "keywords": [
     "framework",
     "react",

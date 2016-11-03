@@ -16,6 +16,7 @@ export default () => {
         input.value = ''
       }}>
         <input ref={node => input = node} />
+        {' '}
         <button type="submit">
           Add Todo
         </button>
